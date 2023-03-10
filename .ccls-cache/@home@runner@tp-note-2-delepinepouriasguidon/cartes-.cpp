@@ -4,7 +4,7 @@ using namespace std;
 
 
 cartemoins::cartemoins(){
-  this->couleur=0;
+  this->couleur=INCOLOR;
 }
 
 
