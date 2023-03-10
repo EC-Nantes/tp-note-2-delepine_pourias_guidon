@@ -1,5 +1,8 @@
+#pragma once
 #include "carte.h"
+#pragma once
 #include <vector>
+#pragma once
 #include "main.cpp"
 
 using namespace std;
@@ -7,9 +10,6 @@ using namespace std;
 class joueur
 {
 private:
-    vector<carte> main;
-    
-
     vector<carte> main;
     COULEUR Tuile;
 public:

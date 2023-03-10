@@ -1,3 +1,4 @@
+#pragma once
 #include "joueur.h"
 
 joueur::joueur(COULEUR tuile)

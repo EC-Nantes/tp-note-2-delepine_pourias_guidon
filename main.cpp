@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "partie.h"
 using namespace std;
