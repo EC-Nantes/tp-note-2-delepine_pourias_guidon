@@ -11,3 +11,6 @@ carteplus::carteplus(){
 carteplus::carteplus(COULEUR couleur){
   this->couleur=couleur;
 }
+
+
+carteplus::action

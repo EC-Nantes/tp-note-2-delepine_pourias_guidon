@@ -11,3 +11,8 @@ cartemoins::cartemoins(){
 cartemoins::cartemoins(COULEUR couleur){
   this->couleur=couleur;
 }
+
+
+cartemoins::action(){
+  
+}
