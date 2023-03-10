@@ -1,16 +1,12 @@
 class carte
-{
-private:
-    /* data */
-public:
-    carte(/* args */);
-    ~carte();
-};
-
-carte::carte(/* args */)
-{
-}
-
-carte::~carte()
-{
-}
+  {
+  protected:
+    COULEUR couleur;
+    COULEUR couleurs;
+    ACTION actions;
+  public:
+    carte();
+    carte(COULEUR couleur);
+    carte(COULEUR couleur, ACTION action);
+    virtual void action()=0;
+  };
