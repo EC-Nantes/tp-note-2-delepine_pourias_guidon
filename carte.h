@@ -1,16 +1,24 @@
+#pragma once
+#include <iostream>
+#include "main.cpp"
+using namespace std;
+
+
 class carte
-{
-private:
-    /* data */
-public:
-    carte(/* args */);
-    ~carte();
-};
+  {
+  protected:
+    COULEUR couleurs;
+    ACTION actions;
+  public:
+    carte();
+    carte(COULEUR couleur);
+    virtual void action()=0;
+    int getCouleur(){return this->couleurs;};
+    int getAction(){return this->actions;};
+  };
 
-carte::carte(/* args */)
-{
-}
 
-carte::~carte()
-{
-}
+
+  
+  
+
