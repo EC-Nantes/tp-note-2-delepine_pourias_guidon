@@ -1,9 +1,12 @@
+#include "carte.h"
+
 class joueur
 {
 private:
-    /* data */
+    carte C;
 public:
     joueur(/* args */);
+    piocher(carte Pile);
     ~joueur();
 };
 
