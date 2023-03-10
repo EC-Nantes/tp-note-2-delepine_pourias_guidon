@@ -8,7 +8,6 @@
  */
 
 
-#pragma once
 #include "main.cpp"
 #include "tortue.h"
 
