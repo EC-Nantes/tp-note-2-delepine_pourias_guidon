@@ -1,13 +1,12 @@
 #include "carte.h"
-#include vector
+
 class joueur
 {
 private:
 
-    vetor<carte> main;
+    vector<carte> main;
 public:
     joueur(/* args */);
-    piocher(carte Pile);
     ~joueur();
 };
 
