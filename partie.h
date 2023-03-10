@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "joueur.h"
+#include "tortue.h"
 using namespace std;
 
 class partie
@@ -15,6 +16,7 @@ private:
 public:
     partie(/* args */);
     ~partie();
+    void preparationDeLaPartie();
 };
 
 
