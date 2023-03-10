@@ -1,13 +1,14 @@
 #include "carte.h"
 #include <vector>
 
+using namespace std;
+
 class joueur
 {
 private:
-    Vector<int> carte;
+    vector<carte> carte;
 public:
     joueur(/* args */);
-    piocher(carte Pile);
     ~joueur();
 };
 
