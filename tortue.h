@@ -7,16 +7,36 @@
  *
  */
 
-#include <string>
 #include <vector>
 #include "main.cpp"
-using namespace std;
 
+using namespace std;
 
 class tortue {
     public:
     COULEUR couleur;
     int positionX; //abscisse 1->10
     int positionY; //ordonnée 1->5
+
+    /*
+    ** Méthode: Constructeur de la classe
+    */
+    tortue(COULEUR couleur, int x, int y);
+    /*
+    ** Méthode: Seteur de la valeur X
+    */
+   void setCoordoX(int x);
+    /*
+    ** Méthode: Seteur de la valeur X
+    */
+   void setCoordoY(int y);
+    /*
+    ** Méthode: Accesseur à la valeur de X
+    */
+    int getCoordoX();
+    /*
+    ** Méthode: Accesseur à la valeur de y
+    */
+    int getCoordoY();
     
 };
