@@ -11,9 +11,10 @@ enum COULEUR {
   JAUNE = 4,
   VIOLET = 5
 };
+
 int main(int argc, char const *argv[])
 {
-    partie1 partie();
+    partie partie1();
 
     return 0;
 }
