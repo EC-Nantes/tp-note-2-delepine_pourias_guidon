@@ -1,6 +1,7 @@
 #include "carte.h"
 #include <vector>
 #include "main.cpp"
+#include <iostream>
 
 using namespace std;
 
@@ -12,9 +13,9 @@ private:
     COULEUR Tuile;
 public:
     joueur(COULEUR tuile);
-    bool Piocher();
-    bool Jouer();
-    bool Afficher();
+    void Piocher(carte nouvelleCarte);
+    void Jouer();
+    void Afficher();
     ~joueur();
 };
 
