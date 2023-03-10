@@ -4,10 +4,10 @@ using namespace std;
 
 
 carte::carte(){
-    this->couleur=0;
 }
 
 
-carte::carte(COULEUR couleur){
-    this->couleur=couleur;
+carte::carte(COULEUR couleur, ACTION action){
+    this->couleurs=couleur;
+    this->actions=action;
   }
