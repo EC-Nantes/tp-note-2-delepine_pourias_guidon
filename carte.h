@@ -1,7 +1,6 @@
 class carte
   {
   protected:
-    COULEUR couleur;
     COULEUR couleurs;
     ACTION actions;
   public:
