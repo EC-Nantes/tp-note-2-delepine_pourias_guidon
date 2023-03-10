@@ -4,12 +4,10 @@ using namespace std;
 
 
 cartemoins::cartemoins(){
-  this->couleur=INCOLOR;
 }
 
 
 cartemoins::cartemoins(COULEUR couleur){
-  this->couleur=couleur;
+  this->couleurs=couleur;
 }
-
 

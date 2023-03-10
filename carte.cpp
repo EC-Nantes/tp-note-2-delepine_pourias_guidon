@@ -7,7 +7,6 @@ carte::carte(){
 }
 
 
-carte::carte(COULEUR couleur, ACTION action){
+carte::carte(COULEUR couleur){
     this->couleurs=couleur;
-    this->actions=action;
   }
