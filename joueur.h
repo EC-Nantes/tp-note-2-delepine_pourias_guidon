@@ -1,10 +1,10 @@
 #include "carte.h"
-#include vector
+#include <vector>
+
 class joueur
 {
 private:
-
-    vetor<carte> main;
+    Vector<int> carte;
 public:
     joueur(/* args */);
     piocher(carte Pile);
