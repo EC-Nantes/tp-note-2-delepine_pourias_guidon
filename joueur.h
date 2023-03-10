@@ -1,20 +1,21 @@
 #include "carte.h"
-#include vector
+#include <vector>
+#include "main.cpp"
+
+using namespace std;
+
 class joueur
 {
 private:
 
-    vetor<carte> main;
+    vector<carte> main;
+    COULEUR Tuile;
 public:
-    joueur(/* args */);
-    piocher(carte Pile);
+    joueur(COULEUR tuile);
+    bool Piocher();
+    bool Jouer();
+    bool Afficher();
     ~joueur();
 };
 
-joueur::joueur(/* args */)
-{
-}
 
-joueur::~joueur()
-{
-}
