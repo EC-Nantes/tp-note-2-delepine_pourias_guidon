@@ -1,5 +1,10 @@
+#include <iostream>
+#include "partie.h"
+using namespace std;
+
+
 enum COULEUR {
-  INCOLOR = 0,
+  INCOLORE = 0,
   ROUGE = 1,
   BLEU = 2,
   VERT = 3,
@@ -8,6 +13,7 @@ enum COULEUR {
 };
 int main(int argc, char const *argv[])
 {
-    /* code */
+    partie1 partie();
+
     return 0;
 }
