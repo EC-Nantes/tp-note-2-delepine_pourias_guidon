@@ -1,3 +1,4 @@
+#include "ENUM.h"
 class carte
   {
   protected:
