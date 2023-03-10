@@ -8,18 +8,18 @@
  */
 
 
+#pragma once
 #include "main.cpp"
 #include "tortue.h"
 
 /*
-    ** Méthode: Constructeur de la classe
-    */
-    tortue::tortue(COULEUR nouvCouleur, int x, int y){
-        this -> couleur= nouvCouleur;
-        this -> positionX= x;
-        this -> positionY= y;
-    };
-    /*
+** Méthode: Constructeur de la classe
+*/
+tortue::tortue(COULEUR nouvCouleur, int x, int y){
+    this -> couleur= nouvCouleur;
+    this -> positionX= x;
+    this -> positionY= y;
+};
 
 /*
     ** Méthode: Seteur de la valeur X
