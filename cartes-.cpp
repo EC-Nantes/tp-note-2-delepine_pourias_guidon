@@ -13,6 +13,3 @@ cartemoins::cartemoins(COULEUR couleur){
 }
 
 
-cartemoins::action(){
-  
-}

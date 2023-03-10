@@ -13,4 +13,3 @@ carteplus::carteplus(COULEUR couleur){
 }
 
 
-carteplus::action
