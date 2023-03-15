@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
+#include <iostream>
 #include "ENUM.h"
-#include "partie.h"
 #include "carte.h"
 
 using namespace std;
@@ -14,7 +14,7 @@ private:
 public:
 
     joueur(COULEUR tuile);
-    void Piocher();
+    void Piocher(carte CartePioche);
     void Jouer();
     void Afficher();
     ~joueur();
