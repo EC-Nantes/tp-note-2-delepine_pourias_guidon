@@ -2,6 +2,7 @@
 #include <vector>
 #include "ENUM.h"
 #include "partie.h"
+#include "carte.h"
 
 using namespace std;
 
@@ -9,7 +10,7 @@ class joueur
 {
 private:
 
-    //vector<carte> main;
+    vector<int> main; //modifier int par carte
     COULEUR Tuile;
 public:
     joueur(COULEUR tuile);
