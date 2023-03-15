@@ -1,4 +1,5 @@
 #pragma once
+
 enum COULEUR {
   INCOLOR = 0,
   ROUGE = 1,
@@ -15,4 +16,3 @@ enum ACTION {
   fleche = 3,
   flechefleche = 4,
 };
-
