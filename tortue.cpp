@@ -7,8 +7,6 @@
  *
  */
 
-
-#include "main.cpp"
 #include "tortue.h"
 
 /*
