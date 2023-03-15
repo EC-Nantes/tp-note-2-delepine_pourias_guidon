@@ -16,13 +16,13 @@ using namespace std;
 class tortue {
     public:
     COULEUR couleur;
-    int positionX; //abscisse 1->10
-    int positionY; //ordonnée 1->5
+    int positionX = 0; //abscisse 1->10
+    int positionY = 0; //ordonnée 1->5
 
     /*
     ** Méthode: Constructeur de la classe
     */
-    tortue(COULEUR couleur, int x, int y);
+    tortue(COULEUR couleur);
     /*
     ** Méthode: Seteur de la valeur X
     */
@@ -46,10 +46,8 @@ class tortue {
 /*
 ** Méthode: Constructeur de la classe
 */
-tortue::tortue(COULEUR nouvCouleur, int x, int y){
+tortue::tortue(COULEUR nouvCouleur){
     this -> couleur= nouvCouleur;
-    this -> positionX= x;
-    this -> positionY= y;
 };
 
 /*
