@@ -9,14 +9,14 @@ using namespace std;
 class joueur
 {
 private:
-
-    vector<int> main; //modifier int par carte
+    vector<carte> hand; //modifier int par carte
     COULEUR Tuile;
 public:
+
     joueur(COULEUR tuile);
-    bool Piocher();
-    bool Jouer();
-    bool Afficher();
+    void Piocher();
+    void Jouer();
+    void Afficher();
     ~joueur();
 };
 
