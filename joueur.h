@@ -1,32 +1,12 @@
 #pragma once
 #include <vector>
-#include "ENUM.h"
-#include "partie.h"
-
-using namespace std;
-
-class joueur
-{
-private:
-
-    //vector<carte> main;
-    COULEUR Tuile;
-public:
-    joueur(COULEUR tuile);
-    bool Piocher();
-    bool Jouer();
-    bool Afficher();
-    ~joueur();
-};
-
-
-#pragma once
-#include <vector>
 #include <iostream>
 #include "ENUM.h"
 #include "carte.h"
 
 using namespace std;
+
+const char* COULEUR_NOM[] = {"INCOLOR", "ROUGE", "BLEU", "VERT", "JAUNE", "VIOLET"};
 
 class joueur
 {
@@ -64,10 +44,11 @@ carte joueur::Jouer()
 
     if(this->hand.size() > 0){
         do{
-                std::cout << "Choisir une carte :";
-                std:cin >> NumCarte;
+                cout << "Choisir une carte : ";
+                cin >> NumCarte;
             }
         while(NumCarte > (this->hand.size()+1));
+        cout << "Vous avez choisi la carte " << NumCarte << endl;
     }
 
     return CarteAction;
@@ -76,12 +57,13 @@ carte joueur::Jouer()
 void joueur::Afficher()
 {
     for(int i(0);i<this->hand.size();i++){
-        std::cout << "Carte "<<i+1 << " :"<< this->hand[i].getCouleur() << " | "<< this->hand[i].getAction() << endl;
+        std::cout << "Carte " << i+1 << " : "<< COULEUR_NOM[this->hand[i].getCouleur()] << " | "<< this->hand[i].getAction() << endl;
     }
 }
 COULEUR joueur::getTuile(){
     return this->Tuile;
 }
+
 joueur::~joueur()
 {
 }
