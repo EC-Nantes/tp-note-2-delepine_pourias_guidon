@@ -1,0 +1,8 @@
+TP6: Course de tortues
+
+POURIAS Romain
+GUIDON Clément 
+DELEPINE Robin
+BENAROCH Paul
+
+Lien du repository Github: https://github.com/EC-Nantes/tp-note-2-delepine_pourias_guidon.git 
