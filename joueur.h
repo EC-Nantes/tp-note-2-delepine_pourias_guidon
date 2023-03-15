@@ -2,7 +2,6 @@
 #include <vector>
 #include "ENUM.h"
 #include "partie.h"
-
 using namespace std;
 
 class joueur
