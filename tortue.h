@@ -10,9 +10,6 @@
 #pragma once
 #include "ENUM.h"
 #include <vector>
-#include "partie.h"
-#include "joueur.h"
-#include "carte.h"
 
 using namespace std;
 
