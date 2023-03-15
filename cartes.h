@@ -140,7 +140,7 @@ cartef::cartef(COULEUR couleur){
 
 vector<tortue> cartef::action(int num, vector<tortue> vecteur){
 
-  int derniere = vecteur[1].getCoordoX();
+  int derniere = vecteur[num].getCoordoX();
 
   int cpt = 1;
   
@@ -149,7 +149,7 @@ vector<tortue> cartef::action(int num, vector<tortue> vecteur){
       derniere=vecteur[i].getCoordoX();
       cpt=i;
     }
-    vecteur[i].setCoordoX(derniere+2);
+    vecteur[cpt].setCoordoX(derniere+2);
     
   }
 
@@ -180,7 +180,7 @@ carteff::carteff(COULEUR couleur){
 
 vector<tortue> carteff::action(int num, vector<tortue> vecteur){
 
-  int derniere = vecteur[1].getCoordoX();
+  int derniere = vecteur[num].getCoordoX();
 
   int cpt = 1;
   
@@ -189,9 +189,10 @@ vector<tortue> carteff::action(int num, vector<tortue> vecteur){
       derniere=vecteur[i].getCoordoX();
       cpt=i;
     }
-    vecteur[i].setCoordoX(derniere+1);
+    vecteur[cpt].setCoordoX(derniere+1);
     
   }
 
   return vecteur;
 }
+
