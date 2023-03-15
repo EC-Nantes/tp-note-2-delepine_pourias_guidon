@@ -9,7 +9,9 @@
 
 #pragma once
 #include <vector>
-#include "main.cpp"
+#include "partie.h"
+#include "joueur.h"
+#include "cartes.h"
 
 using namespace std;
 
