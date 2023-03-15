@@ -1,6 +1,6 @@
 #pragma once
 #include "ENUM.h"
-#include "joueur.h"
+
 
 class partie
 {
