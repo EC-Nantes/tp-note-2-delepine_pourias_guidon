@@ -44,7 +44,7 @@ carte joueur::Jouer()
 
     if(this->hand.size() > 0){
         do{
-                cout << "Choisir une carte : ";
+                cout << endl << "Choisir une carte : ";
                 cin >> NumCarte;
             }
         while(NumCarte > (this->hand.size()+1));
