@@ -1,4 +1,9 @@
-#pragma once
-#include "partie.h"
-#include "joueur.h"
-#include "cartes.h"
+class tortue
+{
+private:
+    /* data */
+public:
+    tortue(/* args */);
+    ~tortue();
+};
+

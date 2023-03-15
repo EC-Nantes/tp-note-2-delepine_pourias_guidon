@@ -1,10 +1,14 @@
 #include "joueur.h"
+using namespace std;
 
-joueur::joueur(COULEUR tuile)
+joueur::joueur(/* args */)
 {
-    this->Tuile= tuile;
 }
 
 joueur::~joueur()
+{
+}
+
+joueur::joueur(COULEUR Tuile)
 {
 }

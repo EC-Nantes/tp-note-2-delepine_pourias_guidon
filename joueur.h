@@ -1,20 +1,15 @@
-#pragma once
-#include <vector>
+#pragma once 
 #include "ENUM.h"
-#include "partie.h"
-using namespace std;
 
 class joueur
 {
 private:
-
-    //vector<carte> main;
-    COULEUR Tuile;
+    /* data */
+    
 public:
-    joueur(COULEUR tuile);
-    bool Piocher();
-    bool Jouer();
-    bool Afficher();
+    COULEUR Tuile;
+    joueur(/* args */);
+    joueur(COULEUR Tuile);
     ~joueur();
 };
 
