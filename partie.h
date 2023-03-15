@@ -1,7 +1,9 @@
+#pragma once
+#include "ENUM.h"
+#include "joueur.h"
+
 class partie
 {
-private:
-    /* data */
 public:
     partie(/* args */);
     ~partie();

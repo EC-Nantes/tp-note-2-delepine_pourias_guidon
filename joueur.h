@@ -1,6 +1,7 @@
-#include "carte.h"
+#pragma once
 #include <vector>
-#include "main.cpp"
+#include "ENUM.h"
+#include "partie.h"
 
 using namespace std;
 
@@ -8,7 +9,7 @@ class joueur
 {
 private:
 
-    vector<carte> main;
+    //vector<carte> main;
     COULEUR Tuile;
 public:
     joueur(COULEUR tuile);
