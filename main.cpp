@@ -1,12 +1,12 @@
-#include <iostream>
-#include "partie.h"
 #include "ENUM.h"
+#include <iostream>
 using namespace std;
+
 
 
 int main(int argc, char const *argv[])
 {
-    partie partie1;
-
+    cout << "hello world" << endl; 
+    /* code */
     return 0;
 }

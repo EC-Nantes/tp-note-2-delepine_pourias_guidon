@@ -1,8 +1,6 @@
-#ifndef ENUM_H
-#define ENUM_H
-
+#pragma once
 enum COULEUR {
-  INCOLORE = 0,
+  INCOLOR = 0,
   ROUGE = 1,
   BLEU = 2,
   VERT = 3,
@@ -10,4 +8,11 @@ enum COULEUR {
   VIOLET = 5
 };
 
-#endif // ENUM_H
+enum ACTION {
+  plusplus = 0,
+  plus = 1,
+  moins = 2,
+  fleche = 3,
+  flechefleche = 4,
+};
+
