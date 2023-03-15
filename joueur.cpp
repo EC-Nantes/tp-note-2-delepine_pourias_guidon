@@ -1,7 +1,8 @@
-#pragma once
+#ifndef JOUEUR_H
+#define JOUEUR_H
 #include "joueur.h"
 
-joueur::joueur(COULEUR tuile)
+joueur::joueur(int tuile)
 {
     this->Tuile= tuile;
 }
@@ -9,3 +10,4 @@ joueur::joueur(COULEUR tuile)
 joueur::~joueur()
 {
 }
+#endif

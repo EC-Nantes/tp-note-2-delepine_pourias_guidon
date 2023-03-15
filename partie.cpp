@@ -1,11 +1,8 @@
 #pragma once
 #include "partie.h"
-#pragma once
 #include <random>
-#pragma once
 #include <algorithm>
-#pragma once
-#include "main.cpp"
+#include "ENUM.h"
 using namespace std;
 
 

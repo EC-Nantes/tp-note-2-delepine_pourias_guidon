@@ -1,3 +1,6 @@
+#ifndef CARTE_H
+#define CARTE_H
+
 class carte
 {
 private:
@@ -14,3 +17,4 @@ carte::carte(/* args */)
 carte::~carte()
 {
 }
+#endif
