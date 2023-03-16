@@ -35,24 +35,24 @@ vector<tortue> cartemoins::action(int num, vector<tortue> vecteur){
   
   vecteur[num].setCoordoX(x-1); 
 
-  for (int z=0; z<=4;z++){
+  for (int z=0; z<=4;z++){ 
     if (vecteur[z].getCoordoX()==(x-1) && z!=num){
-      sur_case++;
+      sur_case++; //détécter le nombre de tortue présentes sur la case
     }
   }
-  vecteur[num].setCoordoY(sur_case); 
+  vecteur[num].setCoordoY(sur_case); //%aj de l'attribut Y
 
   for (int i=0; i<=4;i++){
     
     if (vecteur[i].getCoordoX()==x && i!=num){
       if (vecteur[i].getCoordoY()>y){
         vecteur[i].setCoordoX(vecteur[i].getCoordoX()-1);
-        vecteur[i].setCoordoY(sur_case+1);
+        vecteur[i].setCoordoY(sur_case+1); //MAJ la position des tortues au-dessus de celle que l'on déplace
         sur_case++;
       }
     }
   } 
-  return vecteur;
+  return vecteur; //Retourne le vecteur de tortues mis à jour
 } 
 
 
@@ -187,7 +187,7 @@ cartef::cartef(COULEUR couleur){
 
 vector<tortue> cartef::action(int num, vector<tortue> vecteur){
 
-  vector <int> dernieres={0};
+  vector <int> dernieres={0}; //Vecteur qui définit la position dans le vecteur de tortues (vecteur) des tortues qui sont le moins avancé
   
   for (int i=1; i<=4;i++){
     if (vecteur[i].getCoordoX()<vecteur [dernieres[0]].getCoordoX()){
@@ -202,14 +202,13 @@ vector<tortue> cartef::action(int num, vector<tortue> vecteur){
   
   for (int b=0 ; b<=4 ; b++){
     if (vecteur[b].getCoordoX() == vecteur[dernieres[0]].getCoordoX()+1){
-      cpt++;
+      cpt++; //Détecte si des tortues sont déjà présentes sur la case où l'on sohaite déplacer celles souhaitées
     }
   }
 
     for (int b=0 ; b<=4 ; b++){
-    
-    if (b>0 && dernieres[b]!=0 || b==0){
-      vecteur[dernieres[b]].setCoordoX(vecteur[dernieres[b]].getCoordoX()+1);
+    if (b>0 && dernieres[b]!=0 || b==0){ //Pour détecter la fin de la liste (car la liste est complétée par des 0)
+      vecteur[dernieres[b]].setCoordoX(vecteur[dernieres[b]].getCoordoX()+1); //Maj des positions x puis y des tortues qui sont les moins avancées
       vecteur[dernieres[b]].setCoordoY(cpt+vecteur[dernieres[b]].getCoordoY());
       }
   }
