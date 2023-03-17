@@ -10,7 +10,7 @@ const char* COULEUR_NOM[] = {"INCOLOR", "ROUGE", "BLEU", "VERT", "JAUNE", "VIOLE
 
 class joueur
 {
-private:
+protected:
     vector<carte> hand; //modifier int par carte
     COULEUR Tuile;
 public:

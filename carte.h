@@ -1,18 +1,22 @@
 #pragma once 
 #include <iostream>
 #include <string>
+#include "ENUM.h"
+#include <vector>
+#include "tortue.h"
 using namespace std;
 
 class carte
 {
-private:
-    /* data */
+protected:
+    COULEUR couleurs;
+    ACTION actions;
 public:
     carte(/* args */);
     ~carte();
-    void action();
     COULEUR getCouleur();
-    string getAction();
+    ACTION getAction();
+    virtual vector<tortue> action(int num, vector<tortue> vecteur) = 0;
 };
 
 carte::carte(/* args */)
@@ -23,16 +27,12 @@ carte::~carte()
 {
 }
 
-string carte::getAction(){
-    return "L'action est [c'est ton tour clément]";
+ACTION carte::getAction(){
+    return this->actions;
 }
 
-void carte::action(){
-    cout << "L'action est effectuée" << endl;
-}
 
 COULEUR carte::getCouleur(){
-
-    return ROUGE;
+    return this->couleurs;
 }
 
