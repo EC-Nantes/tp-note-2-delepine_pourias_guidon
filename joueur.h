@@ -1,8 +1,8 @@
 #pragma once
-#include <vector>
-#include <iostream>
+//#include <vector>
+//#include <iostream>
 #include "ENUM.h"
-#include "carte.h"
+#include "cartes.h"
 
 using namespace std;
 

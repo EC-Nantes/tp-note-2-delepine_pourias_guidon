@@ -1,10 +1,10 @@
 #pragma once
 #include "ENUM.h"
-#include <vector>
-#include <iostream>
+//#include <vector>
+//#include <iostream>
 #include "joueur.h"
-#include "carte.h"
-#include "tortue.h"
+//#include "carte.h"
+//#include "tortue.h"
 #include <random>
 #include <algorithm>
 using namespace std;
@@ -37,10 +37,15 @@ partie::~partie()
 }
 
 void partie::preparationDeLaPartie(){
+    /*
     cout << "Préparation de la partie" << endl;
     // INITIALISATION DE LA PIOCHE
-    // attente de la classe carte
-    // vectPioche.push_back(carteplusplus(i));
+    // a terminer
+    for (size_t i = 0; i < 52; i++)
+    {
+        vectPioche.push_back(carteplusplus(COULEUR(i)));
+    }
+    
 
     // Mélanger les éléments du vecteur
     random_device rd;
@@ -81,6 +86,7 @@ void partie::preparationDeLaPartie(){
 
     cout << "Partie prête" << endl;
     cout << endl;
+    */
 }
 
 
@@ -88,19 +94,21 @@ void partie::deroulementPartie(){
     int nbTour = 0;
     int i = 0;
     cout << "Lancement de la partie" << endl;
+    /*
     while (this->checkFinPartie())
     {
         i = nbTour % (nbJoueurs +1);
         cout << endl;
         cout << "+ Le joueur avec la tuile " << COULEUR_NOM[vectJoueurs[i].getTuile()] << " joue" << endl;
         vectDefausse.push_back(vectJoueurs[i].Jouer());
-        vectDefausse.back().action();
+        //vectDefausse.back().action(vectDefausse.back().getCouleur(), vectTortue);
         cout << "La carte est défaussée" << endl;
 
         vectJoueurs[i].Piocher(vectPioche.back());
         vectPioche.pop_back();
         nbTour++;
     }
+    */
     
 
     cout << "Fin de la partie" << endl;
@@ -110,6 +118,7 @@ void partie::deroulementPartie(){
 bool partie::checkFinPartie(){
     bool finPartie = true;
     //cout << "---Check fin de partie---" << endl;
+    /*
     
     cout << endl;
     for (size_t i = 0; i < vectTortue.size(); i++){
@@ -122,6 +131,8 @@ bool partie::checkFinPartie(){
             finPartie = false;
         }
     }
+
+    */
 
     return finPartie;
 }

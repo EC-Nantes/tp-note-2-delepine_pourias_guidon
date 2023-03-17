@@ -1,5 +1,5 @@
 #include "partie.h"
-#include <iostream>
+//#include <iostream>
 using namespace std;
 
 

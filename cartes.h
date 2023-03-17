@@ -1,7 +1,7 @@
 #pragma once
 #include"carte.h"
-#include"tortue.h"
-#include <iostream>
+//#include"tortue.h"
+//#include <iostream>
 
 //Cartes -
 
