@@ -11,13 +11,13 @@ const char* COULEUR_NOM[] = {"INCOLOR", "ROUGE", "BLEU", "VERT", "JAUNE", "VIOLE
 class joueur
 {
 protected:
-    vector<carte> hand; //modifier int par carte
+    vector<carte&> hand; //modifier int par carte
     COULEUR Tuile;
 public:
 
     joueur(COULEUR tuile);
-    void Piocher(carte CartePioche);
-    carte Jouer();
+    void Piocher(carte& CartePioche);
+    carte& Jouer();
     COULEUR getTuile();
     void Afficher();
     void choisirNumber();
@@ -28,14 +28,14 @@ joueur::joueur(COULEUR tuile)
 {
     this->Tuile= tuile;
 }
-void joueur::Piocher(carte CartePioche)
+void joueur::Piocher(carte& CartePioche)
 {
     this->hand.push_back(CartePioche);
 }
-carte joueur::Jouer()
+carte& joueur::Jouer()
 {
     int NumCarte = 0;
-    carte CarteAction;
+    carte * CarteAction;
     int stopLoop = 0;
 
     //Step Choisir carte
@@ -51,7 +51,7 @@ carte joueur::Jouer()
         cout << "Vous avez choisi la carte " << NumCarte << endl;
     }
 
-    return CarteAction;
+    return * CarteAction;
     
 }
 void joueur::Afficher()
