@@ -47,8 +47,9 @@ vector<tortue> carte::action(vector<tortue> vecteur, int joueur){
 
 
     if(joueur == 0){ // c'est une ia
-        
         num = rand() % 5;
+        cout<<"L'IA a choisi la tortue"<<COULEUR_NOM[num] << endl;
+            
     }else{
         if (this->getCouleur()==0 && this->getAction()<3){
             cout<<"Vous pouvez utiliser l'action "<<ACTION_NOM[this->getAction()]<<" sur la tortue de votre choix :"<<endl<<endl<<"Tortue Rouge : 0"<<endl<<"Tortue BLEU : 1"<<endl<<"Tortue VERT : 2"<<endl<<"Tortue JAUNE : 3"<<endl<<"Tortue VIOLET : 4"<<endl<<endl<<"Choisissez une tortue : ";
