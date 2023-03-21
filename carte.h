@@ -14,17 +14,19 @@ public:
     carte(/* args */);
     carte(ACTION typeAction, COULEUR typeCouleur);
     ~carte();
-    vector<tortue> action(vector<tortue> vecteur);
+    vector<tortue> action(vector<tortue> vecteur, int joueur);
     COULEUR getCouleur();
     ACTION getAction();
 };
 
 carte::carte(/* args */)
 {
+    srand(time(NULL));
 }
 
 carte::carte(ACTION typeAction, COULEUR typeCouleur)
 {
+    srand(time(NULL));
     this->actions = typeAction;
     this->couleurs = typeCouleur;
 }
@@ -37,15 +39,24 @@ ACTION carte::getAction(){
     return this->actions;
 }
 
-vector<tortue> carte::action(vector<tortue> vecteur){
-    const char* ACTION_NOM[] = {"plusplus", "plus", "moins", "fleche", "flechefleche"};
+vector<tortue> carte::action(vector<tortue> vecteur, int joueur){
+    const char* ACTION_NOM[] = {"++", "+", "-", "fleche", "flechefleche"};
+    const char* COULEUR_NOM[] = {"INCOLORE", "ROUGE", "BLEUE", "VERTE", "JAUNE", "VIOLETTE"};
   
     int num = this->getCouleur()-1;
 
-    if (this->getCouleur()==0 && this->getAction()<3){
-      cout<<"Vous pouvez utiliser l'action "<<ACTION_NOM[this->getAction()]<<" sur la tortue de votre choix :"<<endl<<endl<<"Tortue Rouge : 0"<<endl<<"Tortue BLEU : 1"<<endl<<"Tortue VERT : 2"<<endl<<"Tortue JAUNE : 3"<<endl<<"Tortue VIOLET : 4"<<endl<<endl<<"Choisissez une tortue : ";
-      cin>>num;
+
+    if(joueur == 0){ // c'est une ia
+        
+        num = rand() % 5;
+    }else{
+        if (this->getCouleur()==0 && this->getAction()<3){
+            cout<<"Vous pouvez utiliser l'action "<<ACTION_NOM[this->getAction()]<<" sur la tortue de votre choix :"<<endl<<endl<<"Tortue Rouge : 0"<<endl<<"Tortue BLEU : 1"<<endl<<"Tortue VERT : 2"<<endl<<"Tortue JAUNE : 3"<<endl<<"Tortue VIOLET : 4"<<endl<<endl<<"Choisissez une tortue : ";
+            cin>>num;
+        }
     }
+
+    
 
     if (this->actions == plusplus){
         int sur_case=0;
@@ -220,7 +231,9 @@ vector<tortue> carte::action(vector<tortue> vecteur){
               }
         }
     }
-    cout << "L'action est effectuée : "<< ACTION_NOM[this->getAction()] <<endl;
+
+    cout << "La carte "<< COULEUR_NOM[this->getCouleur()] << " " << ACTION_NOM[this->getAction()]   <<" est jouée"<<endl;
+
     return vecteur;
 }
 

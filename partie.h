@@ -32,8 +32,8 @@ class partie
 partie::partie(/* args */)
 {
     cout << "Création d'une partie" << endl; 
-    std::cout << "...\n";
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //std::cout << "...\n";
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
 }
 
 partie::~partie()
@@ -42,8 +42,9 @@ partie::~partie()
 
 void partie::preparationDeLaPartie(){
     cout << "Préparation de la partie" << endl;
-    std::cout << "...\n";
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //std::cout << "...\n";
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
+
     // INITIALISATION DE LA PIOCHE
     for (size_t i = 1; i <= 5; i++)
     {
@@ -106,8 +107,8 @@ void partie::preparationDeLaPartie(){
     shuffle(vectPioche.begin(), vectPioche.end(), g);
 
     cout << endl << "La pioche a été mélangée " << endl<< endl;
-    std::cout << "...\n";
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //std::cout << "...\n";
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
     /*
     for (size_t i = 0; i < vectPioche.size(); i++)
     {
@@ -117,26 +118,26 @@ void partie::preparationDeLaPartie(){
 
     //INITIALISATION DES JOUEURS
     do {
-        cout << "Entrez le nombre de joueurs (entre 2 et 5) : ";
+        cout << "Entrez le nombre de joueurs réels (entre 0 et 5), le reste des joueurs seront des IA : ";
         cin >> nbJoueurs;
-    } while (nbJoueurs < 2 || nbJoueurs > 5);
+    } while (nbJoueurs < 0 || nbJoueurs > 5);
     cout << "Vous avez choisi " << nbJoueurs << " joueurs." << endl;
 
     for (size_t i = 1; i <= 5; i++)
     {
-        if(i >= nbJoueurs){
-            vectJoueurs.push_back(joueur(COULEUR(i),1));//1 = REEL
+        if(i <= nbJoueurs){
+            vectJoueurs.push_back(joueur(COULEUR(i),1));    //1 = REEL
         }
         else{
-            vectJoueurs.push_back(joueur(COULEUR(i),0));//0 = IA
+            vectJoueurs.push_back(joueur(COULEUR(i),0));    //0 = IA
         }
     }
     //cout << "Nombre de joueur = " << vectJoueurs.size() <<  endl;
     
     shuffle(vectJoueurs.begin(), vectJoueurs.end(), g);
     cout << "Le tour de chaque joueur a été défini aléatoirement" << endl << endl;
-    std::cout << "...\n";
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //std::cout << "...\n";
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
 
     //INITIALISATION DES TORTUES
     for (size_t i = 1; i <= 5; i++)
@@ -144,8 +145,8 @@ void partie::preparationDeLaPartie(){
         vectTortue.push_back(tortue(i));
     }
     cout << endl << "Les tortues ont été initialisées" << endl << endl;
-    std::cout << "...\n";
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //std::cout << "...\n";
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
 
     // FAIRE PIOCHER LES JOUEURS 5 CARTES
     for (size_t i = 0; i < 5; i++)
@@ -158,12 +159,12 @@ void partie::preparationDeLaPartie(){
         }
         cout << endl;
     }
-    std::cout << "...\n";
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //std::cout << "...\n";
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
 
     cout << "Partie prête" << endl;
-    std::cout << "...\n";
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //std::cout << "...\n";
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
     cout << endl;
 }
 
@@ -172,24 +173,10 @@ void partie::deroulementPartie(){
     int nbTour = 0;
     int i = 0;
     cout << "Lancement de la partie" << endl;
-    std::cout << "...\n";
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //std::cout << "...\n";
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
     while (this->checkFinPartie())
     {
-        i = nbTour % 5;
-
-        cout << endl;
-        cout << "+ Le joueur avec la tuile " << COULEUR_NOM[vectJoueurs[i].getTuile()] << " joue" << endl;
-        std::cout << "...\n";
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-        
-        vectDefausse.push_back(vectJoueurs[i].Jouer());
-
-        vectTortue = vectDefausse.back().action(vectTortue);
-        cout << "La carte est défaussée" << endl;
-        std::cout << "...\n";
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-
         if(vectPioche.size() == 0){
             cout << "Il n'y a plus de carte dans la pioche" << endl;
 
@@ -203,9 +190,32 @@ void partie::deroulementPartie(){
             mt19937 g(rd());
             shuffle(vectPioche.begin(), vectPioche.end(), g);
             cout << "Les cartes ont été mélangées" << endl;
-            std::cout << "...\n";
-            std::this_thread::sleep_for(std::chrono::seconds(1));
+            //std::cout << "...\n";
+            //std::this_thread::sleep_for(std::chrono::seconds(1));
         }
+
+
+        i = nbTour % 5;
+
+        cout << endl;
+
+        if(vectJoueurs[i].getTypeJoueur() == 0){ // IA
+            cout << "+ L'IA avec la tuile " << COULEUR_NOM[vectJoueurs[i].getTuile()] << " joue" << endl;
+        }else{
+            cout << "+ Le joueur avec la tuile " << COULEUR_NOM[vectJoueurs[i].getTuile()] << " joue" << endl;
+        }
+        
+        //std::cout << "...\n";
+        //std::this_thread::sleep_for(std::chrono::seconds(1));
+        
+        vectDefausse.push_back(vectJoueurs[i].Jouer());
+
+        vectTortue = vectDefausse.back().action(vectTortue, vectJoueurs[i].getTypeJoueur());
+        cout << "La carte est défaussée" << endl;
+        //std::cout << "...\n";
+        //std::this_thread::sleep_for(std::chrono::seconds(1));
+
+        
 
         vectJoueurs[i].Piocher(vectPioche.back()); 
         vectPioche.pop_back();
@@ -234,8 +244,8 @@ bool partie::checkFinPartie(){
             finPartie = false;
         }
     }
-    std::cout << "...\n";
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    //std::cout << "...\n";
+    //std::this_thread::sleep_for(std::chrono::seconds(2));
 
     return finPartie;
 }

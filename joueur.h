@@ -28,7 +28,13 @@ public:
     void Afficher();
     void choisirNumber();
     ~joueur();
+    int getTypeJoueur();
 };
+
+int joueur::getTypeJoueur()
+{
+    return this->JoueurIA;
+}
 
 joueur::joueur(COULEUR tuile,int IfJoueurIA0)
 {
