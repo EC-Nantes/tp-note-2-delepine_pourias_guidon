@@ -131,7 +131,7 @@ void partie::preparationDeLaPartie(){
             vectJoueurs.push_back(joueur(COULEUR(i),0));//0 = IA
         }
     }
-    cout << "Nombre de joueur = " << vectJoueurs.size() <<  endl;
+    //cout << "Nombre de joueur = " << vectJoueurs.size() <<  endl;
     
     shuffle(vectJoueurs.begin(), vectJoueurs.end(), g);
     cout << "Le tour de chaque joueur a été défini aléatoirement" << endl << endl;
