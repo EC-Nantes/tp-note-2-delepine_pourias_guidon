@@ -21,12 +21,10 @@ public:
 
 carte::carte(/* args */)
 {
-    srand(time(NULL));
 }
 
 carte::carte(ACTION typeAction, COULEUR typeCouleur)
 {
-    srand(time(NULL));
     this->actions = typeAction;
     this->couleurs = typeCouleur;
 }
@@ -46,12 +44,13 @@ vector<tortue> carte::action(vector<tortue> vecteur, int joueur){
     int num = this->getCouleur()-1;
 
 
-    if(joueur == 0){ // c'est une ia
-        num = rand() % 5;
-        cout<<"L'IA a choisi la tortue"<<COULEUR_NOM[num] << endl;
+    if (this->getCouleur()==0 && this->getAction()<3){
+        if(joueur == 0){ // c'est une ia
+            num = rand() % 5;
+            cout<<"L'IA a choisi la tortue"<<COULEUR_NOM[num] << endl;
+                
+        }else{
             
-    }else{
-        if (this->getCouleur()==0 && this->getAction()<3){
             cout<<"Vous pouvez utiliser l'action "<<ACTION_NOM[this->getAction()]<<" sur la tortue de votre choix :"<<endl<<endl<<"Tortue Rouge : 0"<<endl<<"Tortue BLEU : 1"<<endl<<"Tortue VERT : 2"<<endl<<"Tortue JAUNE : 3"<<endl<<"Tortue VIOLET : 4"<<endl<<endl<<"Choisissez une tortue : ";
             cin>>num;
         }

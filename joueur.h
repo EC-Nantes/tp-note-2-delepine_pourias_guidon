@@ -55,16 +55,9 @@ carte joueur::Jouer()
     /*Si c'est une IA*/
     if(this->JoueurIA == 0)
     {
+        cout << endl << "L'IA choisit une carte" << endl;
         NumCarte = rand()%this->hand.size();
-
-        carteChoisie = this->hand[NumCarte];
-
-        //retirer la carte sélectionnée
-        auto it = hand.begin() + NumCarte;
-        this->hand.erase(it);
-    }
-    else
-    {
+    }else{
         this->Afficher();
 
         if(this->hand.size() > 0){
@@ -76,13 +69,13 @@ carte joueur::Jouer()
 
             cout << "Vous avez choisi la carte " << NumCarte << endl;
         }
-        carteChoisie = this->hand[NumCarte];
-
-        //retirer la carte sélectionnée
-        auto it = hand.begin() + NumCarte;
-        this->hand.erase(it);
     }
 
+    carteChoisie = this->hand[NumCarte];
+
+    //retirer la carte sélectionnée
+    auto it = hand.begin() + NumCarte;
+    this->hand.erase(it);
 
     return carteChoisie;
 }
