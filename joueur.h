@@ -7,8 +7,8 @@
 
 using namespace std;
 
-const char* COULEUR_NOM[] = {"INCOLOR", "ROUGE", "BLEU", "VERT", "JAUNE", "VIOLET"};
-const char* ACTION_NOM[] = {"plusplus", "plus", "moins", "fleche", "flechefleche"};
+const char* COULEUR_NOM[] = {"INCOLORE", "ROUGE", "BLEUE", "VERTE", "JAUNE", "VIOLETTE"};
+const char* ACTION_NOM[] = {"++", "+", "-", "fleche", "fleche fleche"};
 
 class joueur
 {
