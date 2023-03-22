@@ -46,8 +46,8 @@ vector<tortue> carte::action(vector<tortue> vecteur, int joueur){
 
     if (this->getCouleur()==0 && this->getAction()<3){ //Si l'action est flèche ou flèche flèche
         if(joueur == 0){ // si c'est une ia
-            num = rand() % 5;
-            cout<<"L'IA a choisie d'effectuer l'action "<< ACTION_NOM[this->getAction()] << " sur la tortue "<<COULEUR_NOM[num] << endl;
+            num = rand() % 5 -1;
+            cout<<"L'IA a choisie d'effectuer l'action "<< ACTION_NOM[this->getAction()] << " sur la tortue "<<COULEUR_NOM[num+1] << endl;
                 
         }else{ //Si c'est un joueur réel, le faire choisir une tortue 
             
